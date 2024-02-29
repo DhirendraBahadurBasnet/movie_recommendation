@@ -1,0 +1,29 @@
+{% extends "index1.html" %}
+
+
+
+{% block content %}
+
+{% for i in range(recommended_movie_titles|length-7) %} 
+<div class="item" >
+  
+  <img  src="{{ recommended_movie_posters[i] }}" movieposter="{{ recommended_movie_posters[i] }}" alt="Image 1"  data-movieid="{{ recommended_movie_ids[i] }}" onclick="redirectToAnotherPage()"  style="cursor: pointer;">
+
+{% endfor %}
+  <h1>hello world</h1>
+<p>{{title}}</p>
+{% endblock %}
+<script>
+    // JavaScript to handle image click events
+      const images = document.querySelectorAll('img');
+    
+      images.forEach(image => {
+      // Retrieve movie ID from the 'data-movieid' attribute
+      const movie_id = image.getAttribute('data-movieid');
+    
+      
+    });
+
+    
+    </script> 
+    
